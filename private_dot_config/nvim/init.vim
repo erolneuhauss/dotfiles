@@ -22,8 +22,8 @@ set ignorecase
 set smartcase
 set list
 set modeline
-set mouse=a
-set number
+"set mouse=a
+set number relativenumber
 set scrolloff=5
 set tabstop=4
 set shiftwidth=4
