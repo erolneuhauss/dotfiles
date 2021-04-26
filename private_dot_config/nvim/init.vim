@@ -14,7 +14,6 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/codi.vim
 
 set smartindent
-set backspace=indent,eol,start
 set confirm
 set cursorline
 set colorcolumn=80
