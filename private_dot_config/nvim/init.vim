@@ -13,44 +13,30 @@ source $HOME/.config/nvim/plug-config/ale.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/codi.vim
 
-set autoindent
 set smartindent
-" set foldmethod=indent
-" set foldlevelstart=99
 set backspace=indent,eol,start
 set confirm
 set cursorline
 set colorcolumn=80
 set expandtab
-set encoding=UTF-8
-set hlsearch
-set incsearch
 set ignorecase
 set smartcase
-set laststatus=2
 set list
 set modeline
 set mouse=a
 set number
-set ruler
 set scrolloff=5
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set splitbelow
 set splitright
-set wildmenu
-"execute pathogen#infect()
 syntax on
 filetype plugin indent on
-"set t_Co=256
-"set term=xterm-256color
-"colorscheme peachpuff
 if (has("termguicolors"))
   set termguicolors
 endif
 colorscheme gruvbox
-set bg=dark
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 highlight CursorLine term=bold cterm=bold ctermbg=234
 
