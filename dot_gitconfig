@@ -1,5 +1,9 @@
 [user]
-	name = eneuhauss
+    # these values are set in ~/.gitconfig_sensitive
+
+[include]
+    path = ~/.gitconfig_sensitive
+
 [core]
     pager = delta
 
