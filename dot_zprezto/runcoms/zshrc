@@ -40,6 +40,7 @@ alias s3="s3cmd --no-ssl --host=ceph-rgw.fritz.box --host-bucket="
 alias exdo='export do=("--dry-run=client" "--output=yaml")'
 
 source <(yq shell-completion zsh)
+source <(chezmoi completion zsh)
 eval $(thefuck --alias)
 
 # MIXED ALIASES
