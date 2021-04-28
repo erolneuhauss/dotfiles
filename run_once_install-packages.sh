@@ -11,8 +11,13 @@ sudo apt-add-repository ppa:umang/indicator-stickynotes
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 sudo curl -fsSLo /usr/share/keyrings/cloud.google.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox.asc | sudo apt-key add -
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt update
 sudo apt install \
     apache2-utils \
@@ -86,6 +91,7 @@ sudo apt install \
     pwgen \
     pwget \
     python3-venv \
+    qemu-kvm \
     ranger \
     retext \
     ripgrep \
