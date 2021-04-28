@@ -114,7 +114,8 @@ sudo apt install \
     xcowsay \
     xxd \
     xz-utils \
-    yarnpkg
+    yarnpkg \
+    zsh
 
 sudo snap install pycharm-community --classic
 sudo snap install universal-ctags
