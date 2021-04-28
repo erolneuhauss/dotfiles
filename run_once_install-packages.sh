@@ -78,7 +78,6 @@ sudo apt install \
     mlocate \
     ncdu \
     neofetch \
-    neovim \
     nmap \
     nodejs \
     npm \
@@ -120,3 +119,11 @@ sudo apt install \
 sudo snap install pycharm-community --classic
 sudo snap install universal-ctags
 sudo snap install helm --classic
+
+sudo npm install -g \
+    fixjson \
+    jsonlint \
+    neovim \
+    npm \
+    tldr \
+    yarn
