@@ -47,7 +47,7 @@ let mapleader = ','
 let mpalocalleader = '\\'
 
 let g:loaded_python_provider = 0
-let g:python3_host_prog = '/home/eneuhauss/.local/share/virtualenvs/eneuhauss-a9uqy8P9/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 let g:jedi#auto_initialization = 0
 
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -60,6 +60,7 @@ nmap <leader>i :ls<CR>:b<Space>
 "nmap <leader>n :NERDTreeFocus<CR>
 "nmap <leader>c :NERDTreeClose<CR>
 nmap <leader>f :Files<CR>
+nmap <leader>g :vertical G<CR>
 nmap <leader>r :RnvimrToggle<CR>
 nmap <leader>s :Startify<CR>
 nmap <leader>t :split<CR> :term make<CR> :startinsert<CR>

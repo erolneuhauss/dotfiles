@@ -10,7 +10,9 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
             \ { 'f': '~/git/fortunes/erol' },
+            \ { 'a': '~/.config/nvim/plug-config/ale.vim' },
             \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'p': '~/.config/nvim/plugs/plugins.vim' },
             \ { 's': '~/.config/nvim/plug-config/start-screen.vim' },
             \ { 'u': '~/.config/nvim/plug-config/fugitive.vim' },
             \ { 'z': '~/.zshrc' },

@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/seoul256.vim'
   Plug 'kevinhwang91/rnvimr'
+  Plug 'lervag/vimtex'
   Plug 'metakirby5/codi.vim'
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
