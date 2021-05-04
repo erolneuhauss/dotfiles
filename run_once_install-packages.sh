@@ -247,3 +247,5 @@
 # sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 # sudo apt-get update && sudo apt-get install -y kubelet=1.19.7-00 kubeadm=1.19.7-00 kubectl=1.19.7-00
 
+# mkdir ~/.zprezto-contrib/
+# git clone https://github.com/prezto-contributions/prezto-kubectl.git ~/.zprezto-contrib/kubectl
