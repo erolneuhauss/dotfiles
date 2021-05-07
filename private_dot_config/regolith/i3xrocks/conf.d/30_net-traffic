@@ -1,0 +1,6 @@
+# Displays network load
+[net-traffic]
+interval=repeat
+color=#458588
+label_color=#458588
+

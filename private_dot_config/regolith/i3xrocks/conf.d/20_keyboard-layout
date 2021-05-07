@@ -1,0 +1,9 @@
+# Keyboard layout
+#
+# Displays current keyboard layout.
+[keyboard-layout]
+interval=1
+label= 
+color=#fbf1c7
+label_color=#fbf1c7
+

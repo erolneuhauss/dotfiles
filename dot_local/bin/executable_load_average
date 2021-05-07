@@ -1,0 +1,7 @@
+#!/bin/bash
+
+LOAD1=$(cut -d ' ' -f1 /proc/loadavg)
+LOAD5=$(cut -d ' ' -f2 /proc/loadavg)
+LOAD15=$(cut -d ' ' -f3 /proc/loadavg)
+
+echo "  ${LOAD1} ${LOAD5} ${LOAD15}"

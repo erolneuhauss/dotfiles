@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-eunuch'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'jiangmiao/auto-pairs'
   Plug 'liuchengxu/vista.vim'

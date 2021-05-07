@@ -1,0 +1,7 @@
+# next workspace
+#
+# Open next available workspace
+[next-workspace-widget]
+interval=60
+color=#b8bb26
+

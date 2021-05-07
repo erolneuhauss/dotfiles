@@ -1,0 +1,6 @@
+# Show the system 1 minute load average.
+[load_average]
+command=$HOME/.local/bin/load_average
+interval=5
+color=#d79921
+label_color=#d79921

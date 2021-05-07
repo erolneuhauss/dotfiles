@@ -1,0 +1,8 @@
+# Fetch the public IP address only on startup
+[public-ip]
+command=wget -qO - icanhazip.com
+interval=3600
+label= 
+color=#458588
+label_color=#458588
+

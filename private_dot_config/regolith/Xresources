@@ -1,0 +1,14 @@
+gnome.wallpaper: /home/eneuhauss/Pictures/Wallpapers/forest_wallpaper.jpg
+i3-wm.bar.font:	pango:DejaVuSansMono Nerd Font Book 13, Font Awesome Free 13
+i3-wm.bar.separator: ❯
+i3xrocks.date.format2: %c
+i3xrocks.label.cpu: 
+i3xrocks.label.dn: 
+i3xrocks.label.memory:  FREE
+i3xrocks.label.mute: 
+i3xrocks.label.next-workspace-widget: 
+i3xrocks.label.sound: 
+i3xrocks.label.thermometer: 
+i3xrocks.label.time: 
+i3xrocks.label.up: 
+i3xrocks.label.wired: 

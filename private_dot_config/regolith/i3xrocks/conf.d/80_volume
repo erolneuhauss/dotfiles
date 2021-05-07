@@ -1,0 +1,8 @@
+# volume
+#
+# Display Volume
+[volume]
+interval=5
+color=#689d6a
+label_color=#689d6a
+

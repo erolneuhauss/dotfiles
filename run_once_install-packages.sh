@@ -249,3 +249,14 @@
 
 # mkdir ~/.zprezto-contrib/
 # git clone https://github.com/prezto-contributions/prezto-kubectl.git ~/.zprezto-contrib/kubectl
+
+# echo "Install: Regolith -- a modern desktop environment"
+# sudo add-apt-repository ppa:regolith-linux/release
+# sudo apt install -y nitrogen compton
+# sudo apt install -y regolith-desktop-complete
+
+# echo "Install greenclip for regolith, rofi"
+# sudo curl -sSLo /usr/local/bin/greenclip https://github.com/erebe/greenclip/releases/download/4.0/greenclip
+# sudo chmod +x /usr/local/bin/greenclip
+# systemctl --user enable --now greenclip.service
+
