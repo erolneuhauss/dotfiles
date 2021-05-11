@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/seoul256.vim'
+  Plug 'jvirtanen/vim-hcl'
   Plug 'kevinhwang91/rnvimr'
   Plug 'lervag/vimtex'
   Plug 'metakirby5/codi.vim'

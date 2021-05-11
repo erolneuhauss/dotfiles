@@ -1,8 +1,7 @@
 [Unit]
-Description=Greenclip is a simple clipboard manager designed to be integrated with rofi
+Description=Greenclip agent
 Documentation=https://github.com/erebe/greenclip
-After=display-manager.service
-
+After=gdm.service
 
 [Service]
 ExecStart=/usr/local/bin/greenclip daemon
