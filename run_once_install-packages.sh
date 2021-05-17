@@ -133,6 +133,7 @@
 # sudo snap install pycharm-community --classic
 # sudo snap install universal-ctags
 # sudo snap install nvim --classic
+# sudo snap install procs --classic
 
 # echo "install hole bunch of python3 modules: glances, bytop, ..."
 # pipenv install -r requirements.txt
@@ -204,6 +205,16 @@
 # git clone --depth 1 https://github.com/ryanoasis/nerd-fonts
 # cd nerd-fonts
 # ./install.sh DejaVuSansMono
+
+# echo "Install 'terraform'"
+# cd /tmp
+# RELEASE='0.15.3'
+# ZIPFILE='terraform_${RELEASE}_linux_amd64.zip'
+# URL='https://releases.hashicorp.com/terraform/${RELEASE}/${ZIPFILE}
+# curl -fsSLo $ZIPFILE $URL
+# unzip $ZIPFILE
+# sudo install -g root -o root terraform /usr/local/bin/terraform
+# rm -f $ZIPFILE
 
 # echo "Install https://github.com/junegunn/vim-plug"
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim \
