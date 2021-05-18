@@ -9,6 +9,7 @@
 #     g++ \
 #     gcc \
 #     gdebi \
+#     gnupg \
 #     libx11-dev \
 #     libxext-dev \
 #     make \
@@ -76,7 +77,6 @@
 #     gnome-shell-extension-system-monitor \
 #     gnome-shell-extensions \
 #     gnome-shell-extensions-gpaste \
-#     gnupg \
 #     golang \
 #     gpaste \
 #     guvcview \
@@ -205,16 +205,6 @@
 # git clone --depth 1 https://github.com/ryanoasis/nerd-fonts
 # cd nerd-fonts
 # ./install.sh DejaVuSansMono
-
-# echo "Install 'terraform'"
-# cd /tmp
-# RELEASE='0.15.3'
-# ZIPFILE='terraform_${RELEASE}_linux_amd64.zip'
-# URL='https://releases.hashicorp.com/terraform/${RELEASE}/${ZIPFILE}
-# curl -fsSLo $ZIPFILE $URL
-# unzip $ZIPFILE
-# sudo install -g root -o root terraform /usr/local/bin/terraform
-# rm -f $ZIPFILE
 
 # echo "Install https://github.com/junegunn/vim-plug"
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim \
