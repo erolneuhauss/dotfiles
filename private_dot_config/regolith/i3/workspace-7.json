@@ -22,7 +22,7 @@
          "swallows": [
             {
                "class": "^Chromium$",
-               "title": "^Kubernetes\\ cluster\\ monitoring\\ \\(via\\ Prometheus\\)\\ \\-\\ Grafana\\ \\-\\ Chromium$"
+               "title": "^Dashboards\\:\\ Manage\\ \\-\\ Grafana\\ \\-\\ Chromium$"
             }
          ],
          "type": "con"

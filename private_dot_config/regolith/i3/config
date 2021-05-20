@@ -699,4 +699,4 @@ exec "evince ~/git/cheatsheets/regolith-i3_keybindings.pdf"
 ## Workspace 7
 exec "i3-msg 'workspace 7; append_layout ~/.config/regolith/i3/workspace-7.json'"
 exec "x-terminal-emulator --role='k9s' --working-directory='~/git/studies/kubernetes/ckad' -x 'k9s'"
-exec "chromium --new-window 'http://grafana.fritz.box/d/mws5eiCMz/kubernetes-cluster-monitoring-via-prometheus?orgId=1&refresh=10s&from=now-3h&to=now'"
+exec "chromium --new-window 'http://grafana.fritz.box/dashboards'"
