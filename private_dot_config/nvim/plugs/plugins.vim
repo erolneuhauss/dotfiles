@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'altercation/vim-colors-solarized'
   Plug 'bling/vim-airline'
   Plug 'chr4/nginx.vim'
-  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/seoul256.vim'
