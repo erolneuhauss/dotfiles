@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jvirtanen/vim-hcl'
   Plug 'kevinhwang91/rnvimr'
   Plug 'lervag/vimtex'
-  Plug 'metakirby5/codi.vim'
+  Plug 'metakirby5/codi.vim' " virtual text next to your code
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
   Plug 'morhetz/gruvbox'
@@ -27,13 +27,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   " did CocInstall coc-jedi instead of line below
   " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-  Plug 'spinks/vim-leader-guide'
+  Plug 'spinks/vim-leader-guide' " neovim keymap display
   Plug 'tmhedberg/simpylfold'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands 
   Plug 'vim-airline/vim-airline-themes'
   Plug 'jiangmiao/auto-pairs'
   Plug 'liuchengxu/vista.vim'
