@@ -6,15 +6,18 @@
 #     ca-certificates \
 #     cmake \
 #     curl \
+#     fuse \
 #     g++ \
 #     gcc \
 #     gdebi \
 #     gnupg \
+#     libsquashfuse0 \
 #     libx11-dev \
 #     libxext-dev \
 #     make \
 #     python3-venv \
 #     snapd \
+#     squashfuse \
 #     software-properties-common
 
 # echo "Install virtualisation: libvirt and vagrant"
