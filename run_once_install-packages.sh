@@ -59,6 +59,7 @@
 #     bb \
 #     bc \
 #     chktex \
+#     golang-cfssl \
 #     cloud-guest-utils \
 #     cowsay \
 #     default-jre \
@@ -91,6 +92,7 @@
 #     imagemagick \
 #     iozone3 \
 #     jq \
+#     keepass2 \
 #     lacheck  \
 #     lshw \
 #     lsscsi \
