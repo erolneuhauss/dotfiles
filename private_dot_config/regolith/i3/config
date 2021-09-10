@@ -674,29 +674,29 @@ exec --no-startup-id $i3-wm.program.3
 ## Prepare predefined workspace layouts
 assign [class="Chromium" title="erolneuhauss - Chromium"] $ws1
 assign [class="X-terminal-emulator" window_role="ws1-terminal"] $ws1
-assign [class="Chromium" title="Education - Chromium"] $ws2
-assign [class="Chromium" title="Education, #42 - Monthly Xing/CV Management - Chromium"] $ws2
+# assign [class="Chromium" title="Education - Chromium"] $ws2
+# assign [class="Chromium" title="Education, #42 - Monthly Xing/CV Management - Chromium"] $ws2
 assign [class="Evince" title="regolith-i3_keybindings.pdf"] $ws3
 assign [class="Evince" title="mixed_cheatsheet.pdf"] $ws3
-assign [class="Chromium" title="Kubernetes cluster monitoring"] $ws7
-assign [class="X-terminal-emulator" window_role="k9s"] $ws7
+# assign [class="Chromium" title="Kubernetes cluster monitoring"] $ws7
+# assign [class="X-terminal-emulator" window_role="k9s"] $ws7
 
 ## Workspace 1
 exec "i3-msg 'workspace 1; append_layout ~/.config/regolith/i3/workspace-1.json'"
 exec "chromium --new-window https://github.com/erolneuhauss"
 exec "x-terminal-emulator --role='ws1-terminal'"
 
-## Workspace 2
-exec "i3-msg 'workspace 2; append_layout ~/.config/regolith/i3/workspace-2.json'"
-exec "chromium --new-window http://kanboard.fritz.box/board/1"
-exec "chromium --new-window http://kanboard.fritz.box/project/1/task/42"
+# ## Workspace 2
+# exec "i3-msg 'workspace 2; append_layout ~/.config/regolith/i3/workspace-2.json'"
+# exec "chromium --new-window http://kanboard.fritz.box/board/1"
+# exec "chromium --new-window http://kanboard.fritz.box/project/1/task/42"
 
 ## Workspace 3
 exec "i3-msg 'workspace 3; append_layout ~/.config/regolith/i3/workspace-3.json'"
 exec "evince ~/git/cheatsheets/mixed_cheatsheet.pdf"
 exec "evince ~/git/cheatsheets/regolith-i3_keybindings.pdf"
 
-## Workspace 7
-exec "i3-msg 'workspace 7; append_layout ~/.config/regolith/i3/workspace-7.json'"
-exec "x-terminal-emulator --role='k9s' --working-directory='~/git/studies/kubernetes/ckad' -x 'k9s'"
-exec "chromium --new-window 'http://grafana.fritz.box/dashboards'"
+# ## Workspace 7
+# exec "i3-msg 'workspace 7; append_layout ~/.config/regolith/i3/workspace-7.json'"
+# exec "x-terminal-emulator --role='k9s' --working-directory='~/git/studies/kubernetes/ckad' -x 'k9s'"
+# exec "chromium --new-window 'http://grafana.fritz.box/dashboards'"

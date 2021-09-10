@@ -1,1 +1,1 @@
-nmap <C-P> :FZF<CR>
+nnoremap <C-p> :<C-u>FZF<CR> 

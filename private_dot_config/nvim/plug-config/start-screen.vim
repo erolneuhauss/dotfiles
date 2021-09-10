@@ -10,6 +10,8 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
             \ { 'f': '~/git/fortunes/erol' },
+            \ { 'm': '~/git/cheatsheets/mixed_cheatsheet.tex' },
+            \ { 'm': '~/git/cheatsheets/mixed_cheatsheet.tex' },
             \ { 'a': '~/.config/nvim/plug-config/ale.vim' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'p': '~/.config/nvim/plugs/plugins.vim' },
