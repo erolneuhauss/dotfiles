@@ -1,6 +1,8 @@
 [user]
     # these values are set in ~/.gitconfig_sensitive
 
+[includeIf "gitdir:~/.zprezto/"]
+    path = ~/.gitconfig_sensitive
 [includeIf "gitdir:~/.local/"]
     path = ~/.gitconfig_sensitive
 [includeIf "gitdir:~/git/"]
