@@ -266,3 +266,8 @@
 # sudo chmod +x /usr/local/bin/greenclip
 # systemctl --user enable --now greenclip.service
 
+# Git with gnome-keyring integration
+# https://stackoverflow.com/questions/13385690/how-to-use-git-with-gnome-keyring-integration
+sudo apt install -y libsecret-1-0 libsecret-1-dev
+sudo bash -c "cd /usr/share/doc/git/contrib/credential/libsecret && make"
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
