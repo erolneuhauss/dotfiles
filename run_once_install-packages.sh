@@ -14,6 +14,7 @@
 #     libsquashfuse0 \
 #     libx11-dev \
 #     libxext-dev \
+#     linux-headers-generic  \
 #     make \
 #     python3-venv \
 #     snapd \
@@ -82,6 +83,7 @@
 #     gnome-shell-extensions \
 #     gnome-shell-extensions-gpaste \
 #     golang \
+#     golang-cfssl \
 #     gpaste \
 #     guvcview \
 #     hardinfo \
@@ -92,7 +94,7 @@
 #     imagemagick \
 #     iozone3 \
 #     jq \
-#     keepass2 \
+#     keepassxc \
 #     lacheck  \
 #     lshw \
 #     lsscsi \
@@ -116,6 +118,7 @@
 #     ruby \
 #     s3cmd \
 #     sdparm \
+#     shellcheck \
 #     smartmontools \
 #     stress \
 #     tcpdump \
