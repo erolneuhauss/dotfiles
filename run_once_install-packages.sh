@@ -234,6 +234,7 @@
 
 # sudo apt install --reinstall -y nodejs
 # sudo npm install -g \
+#     bats
 #     fixjson \
 #     jsonlint \
 #     neovim \
