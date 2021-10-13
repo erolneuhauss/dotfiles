@@ -204,9 +204,18 @@
 # sudo gdebi -n $RG
 # rm -f $RG
 
+# echo "Install 'webi' (https://webinstall.dev)"
+# curl -sS https://webinstall.dev/webi | bash
+
 # echo "Install 'k9s' - Kubernetes CLI To Manage Your Clusters In Style!"
 # curl -sS https://webinstall.dev/k9s | bash
 # ~/.local/bin/webi k9s
+
+# echo "Install 'kubectx' - Kubernetes Context Switcher"
+# curl -sS https://webinstall.dev/kubectx | bash
+
+# echo "Install 'kubens' - Kubernetes Namespace Switcher"
+# curl -sS https://webinstall.dev/kubens | bash
 
 # echo "Install nerd-fonts"
 # cd /tmp
