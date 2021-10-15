@@ -282,6 +282,6 @@
 # Git with gnome-keyring integration
 # https://stackoverflow.com/questions/13385690/how-to-use-git-with-gnome-keyring-integration
 # GNOME has deprecated libgnome-keyring and replaced it with libsecret
-sudo apt install -y libsecret-1-0 libsecret-1-dev
-sudo bash -c "cd /usr/share/doc/git/contrib/credential/libsecret && make"
-git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+# sudo apt install -y libsecret-1-0 libsecret-1-dev
+# sudo bash -c "cd /usr/share/doc/git/contrib/credential/libsecret && make"
+# git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
