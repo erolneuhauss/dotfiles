@@ -24,3 +24,8 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+; Workaround for Ubuntu 20.04
+; [credential]
+; 	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[pull]
+	rebase = true
