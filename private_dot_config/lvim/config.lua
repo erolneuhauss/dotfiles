@@ -10,11 +10,13 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 
 -- my additions
+-- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
 vim.opt.relativenumber = true                   --default: false
+vim.opt.mouse = ''                            --default: 'a'
 lvim.lsp.automatic_servers_installation = true  -- default: true
 lvim.lsp.diagnostics.virtual_text = false        -- default: true
 
@@ -60,18 +62,23 @@ lvim.builtin.which_key.mappings["d"] = { "<cmd>LspStop<cr>", "Stop LSP" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
   d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  r = { "<cmd>Trouble lsp_references<cr>", "References" },
+  t = { "<cmd>TroubleToggle<cr>", "Toggle" },
   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
 }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+lvim.builtin.telescope.pickers = { find_files = { find_command = { "rg", "--files", "--hidden", "--no-ignore", "--smart-case", "--glob", "!.git/" } } }
+
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
+-- direction = 'vertical' | 'horizontal' | 'tab' | 'float',
+lvim.builtin.terminal.direction = "float" -- default "float"
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
@@ -119,13 +126,17 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- set additional formatters, if you want to override the default lsp one (if it exists)
-lvim.lang.python.formatters = { { exe = "black" }, { exe = "isort" } }
-lvim.lang.markdown.formatters = { { exe = 'markdownlint' } }
+-- lvim.lang.python.formatters = { { exe = "black" }, { exe = "isort" } }
+-- lvim.lang.markdown.formatters = { { exe = 'markdownlint' } }
 
 -- set additional linters
-lvim.lang.python.linters = { { exe = "flake8", } }
-lvim.lang.sh.linters = { { exe = "shellcheck", } }
-lvim.lang.markdown.linters = { { exe = 'markdownlint' } }
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { exe = "shellcheck", args = { "--severity", "warning" }, },
+  { exe = "markdownlint" },
+}
+-- lvim.lang.python.linters = { { exe = "flake8", } }
+-- lvim.lang.markdown.linters = { { exe = 'markdownlint' } }
 
 -- Additional Plugins
 lvim.plugins = {
@@ -134,6 +145,7 @@ lvim.plugins = {
   {"sainnhe/gruvbox-material"},             -- colorscheme gruvbox-material
   {"iamcco/markdown-preview.nvim"},         -- markdown preview in browser
   {"pearofducks/ansible-vim"},              -- vim syntax plugin for ansible
+  {"sindrets/diffview.nvim"},               -- Single tabpage interface for easily cycling through diffs for all modified files for any git rev
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
@@ -151,12 +163,54 @@ lvim.plugins = {
       require("user.spectre").config()
     end,
   },
+  {
+    "ethanholz/nvim-lastplace",
+    event = "BufRead",
+    config = function()
+      require("nvim-lastplace").setup({
+        lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+        lastplace_ignore_filetype = {
+          "gitcommit", "gitrebase", "svn", "hgcommit",
+        },
+        lastplace_open_folds = true,
+      })
+      end,
+    },
+    {
+      "folke/todo-comments.nvim",
+      event = "BufRead",
+      config = function()
+        require("todo-comments").setup{}
+      end,
+    },
+    {
+      "felipec/vim-sanegx",
+      event = "BufRead",
+    },
+    {
+      "rmagatti/goto-preview",
+      config = function()
+      require('goto-preview').setup {
+        width = 120; -- Width of the floating window
+        height = 25; -- Height of the floating window
+        default_mappings = true; -- Bind default mappings
+        debug = false; -- Print debug information
+        opacity = nil; -- 0-100 opacity level of the floating window where 100 is fully transparent.
+        post_open_hook = nil -- A function taking two arguments, a buffer and a window to be ran as a hook.
+        -- You can use "default_mappings = true" setup option
+        -- Or explicitly set keybindings
+        -- vim.cmd("nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>")
+        -- vim.cmd("nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>")
+        -- vim.cmd("nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>")
+        }
+      end
+    },
 }
 
+-- TODO This need
+-- HACK
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
-
-
