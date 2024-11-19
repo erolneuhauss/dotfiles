@@ -1,0 +1,39 @@
+; WARN: This file is managed by chezmoi. Do not edit directly.
+;       Instead, make changes to ~/.local/share/chezmoi/dot_gitconfig
+;       cm edit ~/.gitconfig
+
+[credential]
+	helper = osxkeychain
+
+[user]
+	name = Erol Neuhauß
+	email = erol.neuhauss@obi.de
+
+[includeIf "gitdir:~/.zprezto/"]
+    path = ~/.gitconfig_sensitive
+[includeIf "gitdir:~/.local/"]
+    path = ~/.gitconfig_sensitive
+[includeIf "gitdir:~/github.com/"]
+    path = ~/.gitconfig_sensitive
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+
+[pull]
+	rebase = false
+[http]
+	postBuffer = 157286400
+[rerere]
+	enabled = true
