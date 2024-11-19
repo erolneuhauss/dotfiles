@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 -- NOTE BufNewFile, BufRead is triggered before FileType event
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'} , {
-    pattern = { '*/templates/*.yaml', '*/templates/*.tpl', '*.gotmpl', 'helmfile*.yaml' },
+    pattern = { '*.tmpl', '*/templates/*.yaml', '*/templates/*.tpl', '*.gotmpl', 'helmfile*.yaml' },
     callback = function()
           vim.opt_local.filetype = 'helm'
     end
