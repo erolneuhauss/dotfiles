@@ -1,0 +1,8 @@
+**/.git/
+**/.git/**
+**/.gitignore
+!.config/nvim/.gitignore
+
+.config/nvim/lazyvim.json
+.config/nvim/lazy-lock.json
+.config/lvim/lazy-lock.json
