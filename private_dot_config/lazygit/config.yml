@@ -1,0 +1,2 @@
+git:
+  fetchAll: true # Pass --all flag when running git fetch. Set to false to fetch only origin (or the current branch's upstream remote if there is one)
