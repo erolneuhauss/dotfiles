@@ -1,0 +1,33 @@
+-- WARN: This file is managed by chezmoi. Do not edit directly.
+--       Instead, make changes to ~/.local/share/chezmoi/dot_wezterm.lua.tmpl.
+--       cm edit ~/.wezterm.lua
+
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+
+-- This is where you actually apply your config choices
+config.color_scheme = 'Tokyo Night'
+config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
+
+{{ $workplace := .WORKPLACE | default "unknown" }}
+{{ if eq $workplace "office" }}
+-- Set WORKPLACE to office
+config.font_size = 22
+{{ else if eq $workplace "home" }}
+-- Set WORKPLACE to home
+config.font_size = 20
+{{ else if eq $workplace "mobile" }}
+-- Set WORKPLACE to mobile
+config.font_size = 18
+{{ else }}
+-- Set WORKPLACE to default: "unknown"
+config.font_size = 18
+{{ end }}
+
+config.selection_word_boundary = ' \t\n{}[]()"\'`,;:'
+
+-- and finally, return the configuration to wezterm
+return config
