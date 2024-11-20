@@ -9,7 +9,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'Dimidium'
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
 
 {{ $workplace := .WORKPLACE | default "unknown" }}
@@ -18,7 +18,7 @@ config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
 config.font_size = 22
 {{ else if eq $workplace "home" }}
 -- Set WORKPLACE to home
-config.font_size = 20
+config.font_size = 24
 {{ else if eq $workplace "mobile" }}
 -- Set WORKPLACE to mobile
 config.font_size = 18
