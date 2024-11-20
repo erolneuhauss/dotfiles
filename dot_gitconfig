@@ -16,6 +16,9 @@
 [includeIf "gitdir:~/github.com/"]
     path = ~/.gitconfig_sensitive
 
+[merge]
+  tool = nvimdiff
+
 [core]
     pager = delta
 
