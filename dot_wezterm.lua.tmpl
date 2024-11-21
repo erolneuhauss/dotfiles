@@ -15,7 +15,7 @@ config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
 {{ $workplace := .WORKPLACE | default "unknown" }}
 {{ if eq $workplace "office" }}
 -- Set WORKPLACE to office
-config.font_size = 22
+config.font_size = 20
 {{ else if eq $workplace "home" }}
 -- Set WORKPLACE to home
 config.font_size = 24
