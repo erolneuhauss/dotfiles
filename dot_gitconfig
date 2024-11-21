@@ -40,3 +40,5 @@
 	postBuffer = 157286400
 [rerere]
 	enabled = true
+[fetch]
+	prune = true
