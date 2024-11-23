@@ -18,6 +18,7 @@ reload "user.plugins"
 reload "user.treesitter"
 reload "user.lsp"
 reload "user.cybu"
+reload "user.project"
 reload "user.telescope"
 reload "user.statusline"
 
