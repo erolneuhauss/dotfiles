@@ -1,0 +1,17 @@
+# Disable SC1091 for the entire script
+# shellcheck disable=SC1091,SC2296
+
+export "${USER,,}"
+source "$HOME/.zprezto/runcoms/path.zsh"
+source "$HOME/.zprezto/runcoms/exports.zsh"
+
+cg() {
+  source "$HOME/.local/bin/clonegit.sh" "${1}"
+}
+
+eval "$(fasd --init auto)"
+eval "$(fzf --bash)"
+
+source "$HOME/.zprezto/runcoms/aliases.zsh"
+
+eval "$(starship init bash)"
