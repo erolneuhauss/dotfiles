@@ -27,8 +27,9 @@ lvim.plugins = {
     "jinh0/eyeliner.nvim", -- Move faster with unique f/F indicators for each word on the line.
     config = function()
       require("eyeliner").setup {
-        highlight_on_key = true,
-        dim = true
+        dim = true,
+        disabled_buftypes = {"nofile"},
+        highlight_on_key = true
       }
     end,
   },
