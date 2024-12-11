@@ -46,7 +46,24 @@ lvim.plugins = {
     "folke/todo-comments.nvim",
     event = "BufRead",
     config = function()
-      require("todo-comments").setup {}
+      require("todo-comments").setup {
+        keywords = {
+          FIX = {
+            icon = " ", -- icon used for the sign, and in search results
+            color = "error", -- can be a hex color, or a named color (see below)
+            alt = { "FIXME", "BUG", "FIXIT", "ISSUE", "BAD", }, -- a set of other keywords that all map to this FIX keywords
+            -- signs = false, -- configure signs for some keywords individually
+          },
+          TODO = {
+            icon = " ",
+            color = "info",
+            alt = { "GOOD" },
+          },
+          PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE", "DATE" } },
+          SECTION = { icon = " ", alt = { "SUBSECTION" } },
+          REFERENCE = { icon = "", color = "info" },
+        }
+      }
     end,
   },
   { "pearofducks/ansible-vim" }, -- vim syntax plugin for ansible
@@ -78,4 +95,13 @@ lvim.plugins = {
       -- Your configuration here (optional)
     },
   },
+  -- {
+  -- "ibhagwan/fzf-lua",
+  -- -- optional for icon support
+  -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- config = function()
+  --   -- calling `setup` is optional for customization
+  --   require("fzf-lua").setup({})
+  -- end
+  -- },
 }

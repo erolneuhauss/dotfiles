@@ -9,9 +9,6 @@
 
 -- NOTE: User Config for predefined plugins
 lvim.builtin.terminal.direction = "tab"
--- NOTE: default lunarvim find_files wouldn't show hidden files
-lvim.builtin.which_key.mappings["f"] = { "<cmd>Telescope find_files<CR>", "Find Files" }
-lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
 reload "user.neovide"
 reload "user.plugins"
@@ -21,6 +18,7 @@ reload "user.cybu"
 reload "user.project"
 reload "user.telescope"
 reload "user.statusline"
+reload "user.which-key"
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- NOTE: improved highlight matching parens (brackets, braces etc.) by bright background color
@@ -41,6 +39,13 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'} , {
     pattern = { '*.tmpl', '*/templates/*.yaml', '*/templates/*.tpl', '*.gotmpl', 'helmfile*.yaml' },
     callback = function()
           vim.opt_local.filetype = 'helm'
+    end
+})
+
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'} , {
+    pattern = { '*.bats' },
+    callback = function()
+          vim.opt_local.filetype = 'sh'
     end
 })
 
