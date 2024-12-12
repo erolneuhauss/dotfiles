@@ -7,7 +7,6 @@
 .config/nvim/lazy-lock.json
 .config/lvim/lazy-lock.json
 
-
 .ApacheDirectoryStudio
 .DS_Store
 .Trash
@@ -19,7 +18,20 @@
 .bash_history
 .cache
 .cargo
+.config/chezmoi
+.config/containers
+.config/gcloud
+.config/helm/repositories.lock
+.config/htop
 .config/iterm2
+.config/k9s
+.config/lazygit/state.yml
+.config/neofetch
+.config/nvim
+.config/p10k
+.config/thefuck
+.cups
+.fasd
 .fzf.bash
 .fzf.zsh
 .gem
@@ -29,6 +41,7 @@
 .ldap_passwd
 .ldaprc.old
 .lesshst
+.local/bin/gitSetGo.sh
 .local/bin/kubectl-filterannotation
 .local/bin/load_average
 .local/bin/loop.sh
@@ -43,6 +56,7 @@
 .m2
 .npm
 .npmrc
+.p10k.zsh
 .parallel
 .python-version
 .rye
@@ -82,11 +96,13 @@ Pictures
 Public
 TODO
 VirtualBox VMs
+azubis
 github.com
 gitlab.com
 gitlab.wild-beavers.de
 go
 mac_history.txt
+pyproject.toml
 requirements-dev.lock
 requirements.lock
 zsh-bench
